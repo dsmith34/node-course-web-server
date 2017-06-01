@@ -52,6 +52,12 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    projectsMessage: 'Here is a link to some projects.'
+  });
+});
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Unable to get page.'
